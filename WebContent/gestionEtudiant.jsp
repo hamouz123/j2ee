@@ -412,7 +412,7 @@ li a:hover {
                     <tr>
 						<th>
 							<span class="custom-checkbox">
-								<input type="checkbox" id="selectAll">
+								<input type="checkbox" hidden id="selectAll">
 								<label for="selectAll"></label>
 							</span>
 						</th>
@@ -437,11 +437,26 @@ li a:hover {
 							</span>
 						</td>
 						
-                        <td><%=e.getNom() %></td>
-                     	<td><%=e.getPrenom() %></td> 
-                     	<td><%=e.getMoyenne() %></td>                  
                      
+                     	<%if(e.getMoyenne()<10)
+                     	{
+                     		%>
+                     	
+                         <td style="background:red"><%=e.getNom() %></td>
+                     	<td style="background:red"><%=e.getPrenom() %></td>
+                     	                     	<td  style="background:red"><%=e.getMoyenne() %></td>                  
+                     	
+                        <%} %>
                         
+                        	<%if(e.getMoyenne()>10)
+                     	{
+                     		%>
+                     	
+                         <td><%=e.getNom() %></td>
+                     	<td><%=e.getPrenom() %></td>
+                     	                     	<td><%=e.getMoyenne() %></td>                  
+                     	
+                        <%} %>
                         
                         <td>
                             	<form action="<%=request.getContextPath()%>/SupprimerEtudiant" method="post">
@@ -527,7 +542,7 @@ li a:hover {
             
 
             
-			<div class="clearfix">
+			<div class="clearfix" hidden>
                 <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#">Previous</a></li>

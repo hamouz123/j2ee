@@ -29,9 +29,19 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
+					<img style="
+    position: relative;
+    top: -100px;
+    left: 150px;
+    vertical-align: middle;
+    text-align: center;
+" src="images/img-01.png" alt="IMG">
 				</div>
-			<h1><b>echec d'authentifcation</b><h1>
+			<h1><b style="
+    position: relative;
+    top: -100px;
+    left: 80px;
+">echec d'authentifcation</b><h1>
 	
 			</div>
 		</div>

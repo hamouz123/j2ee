@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style type="text/css">
+.wrap-login100 {
+    height: 600px;}</style>
 	<title>Login V1</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">

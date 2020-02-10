@@ -431,7 +431,7 @@ li a:hover {
                 
                    	<%ArrayList<Etudiant> etd =  
             		(ArrayList<Etudiant>)request.getAttribute("liste"); 
-					if(etd!=null)
+					if(etd!=null && etd.get(0).getMoyenne()!=null)
 					{
 						if(etd.size()>0)
 						{
@@ -444,6 +444,8 @@ li a:hover {
 							</span>
 						</td>
 						
+                    
+                    
                         <td><%=e.getNom() %></td>
                      	<td><%=e.getPrenom() %></td> 
                      	<td><%=e.getMoyenne() %></td>                  
